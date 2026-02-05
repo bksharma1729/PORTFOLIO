@@ -1,13 +1,13 @@
 
 .profile-section {
   margin-top: 10px;
-  min-height: 10vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 60px 9% 0;
   background: #1B2823;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   color: #ecf4f3;
   
 }
