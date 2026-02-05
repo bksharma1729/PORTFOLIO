@@ -1,13 +1,12 @@
 
 .profile-section {
-  margin-top: 10px;
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 60px 9% 0;
   background: #1B2823;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
   color: #ecf4f3;
   
 }
@@ -281,11 +280,14 @@
 }
 
 .profile-image-wrapper {
+  width: min(320px, 40vw);
+  height: min(320px, 40vw);
+
   position: relative;
-  margin: 300px;
-  width: 45vh;
+  margin: 10px;
+  /* width: 45vh; */
   max-width: 320px;
-  height: 45vh;
+  /* height: 45vh; */
   max-height: 320px;
   border-radius: 50%;
   
