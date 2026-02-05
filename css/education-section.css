@@ -1,0 +1,265 @@
+.education-section {
+  padding: 4rem 0;
+  background: #1B2823;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.education-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.education-header.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.education-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.education-icon {
+  font-size: 2rem;
+  color: var(--accent-primary);
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.education-title:hover .education-icon {
+  transform: scale(1.1) rotate(5deg);
+  color: var(--accent-secondary);
+}
+
+.education-title h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.education-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Timeline Item Styles */
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease;
+}
+
+.timeline-item.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 1rem;
+  top: 2rem;
+  width: 2px;
+  height: 100%;
+  background: var(--gradient-primary);
+  opacity: 0.3;
+}
+
+.timeline-dot {
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.timeline-dot:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+}
+
+.timeline-dot-inner {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: var(--bg-primary);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.timeline-content {
+  margin-left: 1.5rem;
+  padding-bottom: 2rem;
+  flex: 1;
+}
+
+.timeline-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.timeline-card:hover::before {
+  opacity: 0.05;
+}
+
+.timeline-card:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-5px);
+  border-color: var(--accent-primary);
+}
+
+.timeline-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.timeline-card:hover .timeline-title {
+  color: var(--accent-primary);
+}
+
+.timeline-period {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover .timeline-period {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: transparent;
+}
+
+.timeline-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.timeline-card:hover .timeline-subtitle {
+  color: var(--text-primary);
+}
+
+.timeline-description {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.timeline-card:hover .timeline-description {
+  color: var(--text-secondary);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 640px) {
+  .timeline-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .timeline-title {
+    margin: 0;
+  }
+
+  .timeline-period {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .education-title h2 {
+    font-size: 2.5rem;
+  }
+}
