@@ -1,0 +1,400 @@
+
+.profile-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 9% 0;
+  background: #1B2823;
+  position: relative;
+  overflow: hidden;
+  color: #ecf4f3;
+  
+}
+.profile-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Animation classes */
+.profile-info.animate-in {
+  animation: slideInLeft 1s ease-out;
+}
+
+.profile-image-container.animate-in {
+  animation: slideInRight 1s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.profile-image-container {
+ 
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-info {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-name {
+  font-size: 55px;
+  font-weight: 700;
+  color: #ecf4f3;
+  margin-bottom: 0;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.profile-title {
+  font-size: 32px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: -10px;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+/* Rotating roles – typewriter effect with data-text (from reference) */
+.profile-title-rotate {
+  position: relative;
+  display: inline-block;
+  min-width: 22ch;
+  height: 1.4em;
+  vertical-align: middle;
+}
+
+.profile-title-rotate > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 0.7px #adff2f;
+  animation: display-text 16s linear infinite;
+  animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+  0%,
+  24% {
+    visibility: visible;
+  }
+  25%,
+  100% {
+    visibility: hidden;
+  }
+}
+
+.profile-title-rotate > span::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  border-right: 2px solid #adff2f;
+  color: #adff2f;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+.profile-description {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.65;
+  margin: 10px 0 25px;
+  max-width: 520px;
+}
+
+/* Button + social in one row (like image) */
+.btn-sci {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-download-cv {
+  display: inline-block;
+  padding: 10px 30px;
+  background: #adff2f;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  border: 2px solid #adff2f;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #adff2f;
+  transition: all 0.5s ease;
+}
+
+.btn-download-cv:hover {
+  background: transparent;
+  color: #adff2f;
+  box-shadow: none;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-left: 20px;
+}
+
+.social-link {
+  padding: 8px;
+  background: transparent;
+  border: 2px solid #adff2f;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #adff2f;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0 8px;
+  transition: all 0.5s ease;
+}
+
+.social-link:hover {
+  background: #adff2f;
+  color: #000;
+  box-shadow: 0 0 10px #adff2f;
+}
+
+.social-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tooltip Container */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip */
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 1000;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #333;
+}
+
+/* Show tooltip on hover */
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Optional: Add a slight hover effect to the social links */
+.tooltip-container:hover .social-link {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* Rotating border – two pseudo-elements chasing (from reference) */
+@keyframes rotate-border {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.profile-image-wrapper {
+  position: relative;
+  margin: 300px;
+  width: 45vh;
+  max-width: 320px;
+  height: 45vh;
+  max-height: 320px;
+  border-radius: 50%;
+  
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.profile-image-wrapper::before,
+.profile-image-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: conic-gradient(transparent, transparent, transparent, #adff2f);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: rotate-border 10s linear infinite;
+}
+
+.profile-image-wrapper::after {
+  animation-delay: -5s;
+}
+
+.profile-image-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  background: #1B2823;
+  border-radius: 50%;
+  border: 1px solid #1B2823;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.profile-image {
+  position: absolute;
+  top: 30px;
+  display: block;
+  width: 85%;
+  object-fit: cover;
+  mix-blend-mode: lighten;
+}
+
+.profile-image-wrapper:hover .profile-image {
+  transform: scale(1.02);
+}
+
+@media (min-width: 1024px) {
+  .profile-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .profile-info {
+    text-align: left;
+  }
+
+  .profile-name {
+    font-size: 55px;
+  }
+
+  .profile-description {
+    margin-left: 0;
+  }
+
+  .btn-sci {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-name {
+    font-size: 36px;
+  }
+
+  .profile-title {
+    font-size: 24px;
+    /* white-space: nowrap; */
+    
+  }
+
+  .profile-description {
+    font-size: 15px;
+  }
+
+  .btn-sci {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-links {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-image-wrapper {
+    width: 280px;
+    height: 280px;
+    max-width: 280px;
+    max-height: 280px;
+  }
+}
