@@ -1,0 +1,144 @@
+.objective-section {
+  padding: 4rem 0;
+  background: #1B2823;
+  position: relative;
+  overflow: hidden;
+}
+
+.objective-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.objective-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.objective-header.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.objective-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.objective-icon {
+  font-size: 2rem;
+  color: var(--accent-primary);
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.objective-title:hover .objective-icon {
+  transform: scale(1.1) rotate(5deg);
+  color: #b8ff33;
+}
+
+.objective-title h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.objective-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.objective-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0.05;
+  z-index: -1;
+}
+
+.objective-content.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+.objective-content:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent-primary);
+}
+
+.objective-text {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  text-align: center;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.objective-content:hover .objective-text {
+  color: var(--text-primary);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1024px) {
+  .objective-title h2 {
+    font-size: 2.5rem;
+  }
+
+  .objective-content {
+    padding: 3rem;
+  }
+
+  .objective-text {
+    font-size: 1.25rem;
+  }
+}
