@@ -1,4 +1,4 @@
-# Portfolio - Anmol Kumar
+# Portfolio - Bablu Kumar Sharma
 
 A modern, responsive portfolio website showcasing my work as a **Data Analyst** and **Web Developer**. This project highlights my journey through computer science, my technical skills, certifications, and hands-on projects.
 
@@ -55,7 +55,7 @@ To view this portfolio locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/anmolkrjee/My-Portfolio.git
+   git clone https://github.com/bksharma1729/PORTFOLIO.git
    ```
 2. **Navigate to the directory:**
    ```bash
@@ -67,9 +67,16 @@ To view this portfolio locally:
 ---
 
 ## 📞 Contact
-- **Email:** [anmolkrjee1@gmail.com](mailto:anmolkrjee1@gmail.com)
-- **LinkedIn:** [Anmol Kumar](https://www.linkedin.com/in/anmol-kr-jee/)
-- **GitHub:** [@anmolkrjee](https://github.com/anmolkrjee)
+- **Email:** [anmolkrjee1@gmail.com](mailto:babluks2244@gmail.com)
+- **LinkedIn:** [Anmol Kumar](https://www.linkedin.com/in/bablu-kumar-sharma/)
+- **GitHub:** [@anmolkrjee](https://github.com/bksharma1729)
 
 ---
-*Created with ❤️ by Anmol Kumar*
+<p float="left">
+  <img src="images/dashboard.png" width="300"/>
+  <img src="images/skill.png" width="300"/>
+  <img src="images/project.png" width="300"/>
+  <img src="images/certificate.png" width="300"/>
+</p>
+
+*Created with ❤️ by bablu Kumar sharma*
