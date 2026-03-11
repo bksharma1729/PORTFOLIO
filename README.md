@@ -9,7 +9,7 @@ A modern, responsive portfolio website showcasing my work as a **Data Analyst** 
 
 ## 🚀 Live Demo
 *Link to your hosted portfolio goes here (e.g., GitHub Pages, Vercel, or Netlify)*
-
+https://bksharma1729.github.io/PORTFOLIO/
 ---
 
 ## 🛠️ Technologies Used
