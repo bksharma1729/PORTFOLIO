@@ -1,10 +1,15 @@
 # Portfolio - Bablu Kumar Sharma
-
+<p float="left">
+  <img src="images/dashboard.png" width="300"/>
+  <img src="images/skill.png" width="300"/>
+  <img src="images/project.png" width="300"/>
+  <img src="images/certificate.png" width="300"/>
+</p>
 A modern, responsive portfolio website showcasing my work as a **Data Analyst** and **Web Developer**. This project highlights my journey through computer science, my technical skills, certifications, and hands-on projects.
 
 ## 🚀 Live Demo
 *Link to your hosted portfolio goes here (e.g., GitHub Pages, Vercel, or Netlify)*
-
+https://bksharma1729.github.io/PORTFOLIO/
 ---
 
 ## 🛠️ Technologies Used
@@ -47,7 +52,6 @@ Portfolio/
 └── README.md       # Project documentation
 ```
 
----
 
 ## 💻 Getting Started
 
@@ -66,17 +70,9 @@ To view this portfolio locally:
 
 ---
 
-## 📞 Contact
+## 📞 Contact details:-
 - **Email:** [babluks2244@gmail.com](mailto:babluks2244@gmail.com)
 - **LinkedIn:** [Bablu Kumar Sharma](https://www.linkedin.com/in/bablu-kumar-sharma/)
 - **GitHub:** [@bksharma1729](https://github.com/bksharma1729)
 
----
-<p float="left">
-  <img src="images/dashboard.png" width="300"/>
-  <img src="images/skill.png" width="300"/>
-  <img src="images/project.png" width="300"/>
-  <img src="images/certificate.png" width="300"/>
-</p>
-
-*Created with ❤️ by bablu Kumar sharma*
+*Created by bablu Kumar sharma*
