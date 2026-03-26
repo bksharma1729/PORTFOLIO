@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/projects-section.css">
+    <link rel="stylesheet" href="css/ideas-section.css">
 </head>
 <body>
     <div class="portfolio-app">
@@ -26,43 +27,161 @@
 
                     <!-- Projects Grid -->
                     <div class="projects-grid">
-                        <div class="project-card animate-in">
+                        <div class="project-card animate-in" style="animation-delay: 0.1s;">
                             <div class="project-image-container">
-                                <img src="assets/portfolio/WebOne.png" alt="TubeAcademy" class="project-image">
+                                <img src="assets/newproject.png" alt="LeaveFlow" class="project-image">
                                 <div class="project-image-overlay"></div>
+                                <span class="project-badge">Full Stack</span>
                             </div>
 
                             <div class="project-details">
-                                <h3 class="project-title">TubeAcademy</h3>
+                                <h3 class="project-title">LeaveFlow – Full Stack Leave Management System</h3>
                                 <ul class="project-description">
                                     <li class="project-description-item">
                                         <span class="bullet-point"></span>
-                                        A full-featured e-commerce platform with user authentication, payment integration, and admin dashboard. Built with React, Node.js, and MongoDB.
+                                        Full-stack role-based leave management system with Admin, Manager, and Employee modules.
+                                        Includes JWT authentication, role-based authorization middleware, protected routes,
+                                        centralized Axios API handling, leave approval workflow, and dashboard analytics.
                                     </li>
                                 </ul>
 
                                 <!-- Technologies -->
                                 <div class="project-technologies">
                                     <span class="tech-tag">React</span>
-                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">Vite</span>
+                                    <span class="tech-tag">Axios</span>
                                     <span class="tech-tag">Express.js</span>
                                     <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">MongoDB Atlas</span>
+                                    <span class="tech-tag">JWT + RBAC</span>
                                 </div>
 
                                 <!-- Links -->
                                 <div class="project-links">
-                                    <a href="https://github.com/Aditya122221/TubeAcademy" target="_blank" rel="noopener noreferrer" class="project-link github-link">
+                                    <a href="https://github.com/bksharma1729/leaveflow" target="_blank" rel="noopener noreferrer" class="project-link github-link">
                                         <i class="fab fa-github link-icon"></i>
                                         <span>Code</span>
-                                    </a>
-                                    <a href="https://tube-academy.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link demo-link">
-                                        <i class="fas fa-external-link-alt link-icon"></i>
-                                        <span>Live Demo</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="project-card animate-in" style="animation-delay: 0.25s;">
+                            <div class="project-image-container">
+                                <img src="assets/project2.png" alt="Customer Churn Prediction Using Machine Learning" class="project-image">
+                                <div class="project-image-overlay"></div>
+                                <span class="project-badge">ML Project</span>
+                            </div>
+
+                            <div class="project-details">
+                                <h3 class="project-title">Customer Churn Prediction Using Machine Learning</h3>
+                                <ul class="project-description">
+                                    <li class="project-description-item">
+                                        <span class="bullet-point"></span>
+                                        Developed a machine learning based system to predict customer churn using behavioral data,
+                                        service usage patterns, and customer demographics. Multiple classification models were trained
+                                        and evaluated to identify the most accurate predictor, with an interactive dashboard for
+                                        model performance, churn insights, and business decision making.
+                                    </li>
+                                </ul>
+
+                                <div class="project-technologies">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Pandas, NumPy</span>
+                                    <span class="tech-tag">Matplotlib, Seaborn</span>
+                                    <span class="tech-tag">Scikit-learn</span>
+                                    <span class="tech-tag">Tkinter / Streamlit</span>
+                                </div>
+
+                                <div class="project-links">
+                                    <a href="https://github.com/bksharma1729/Customer-Churn-Prediction-Using-Machine-Learning" target="_blank" rel="noopener noreferrer" class="project-link github-link">
+                                        <i class="fab fa-github link-icon"></i>
+                                        <span>Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card animate-in" style="animation-delay: 0.4s;">
+                            <div class="project-image-container">
+                                <img src="assets/project3.png" alt="Finance Tracker" class="project-image">
+                                <div class="project-image-overlay"></div>
+                                <span class="project-badge">FinTech</span>
+                            </div>
+
+                            <div class="project-details">
+                                <h3 class="project-title">Finance Tracker</h3>
+                                <ul class="project-description">
+                                    <li class="project-description-item">
+                                        <span class="bullet-point"></span>
+                                        Developed a personal finance tracking application to manage income, expenses,
+                                        and category-wise spending trends. The project provides clean dashboards for
+                                        transaction insights, budget monitoring, and better day-to-day financial planning.
+                                    </li>
+                                </ul>
+
+                                <div class="project-technologies">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Express.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">REST API</span>
+                                </div>
+
+                                <div class="project-links">
+                                    <a href="https://github.com/bksharma1729/Finance-Tracker" target="_blank" rel="noopener noreferrer" class="project-link github-link">
+                                        <i class="fab fa-github link-icon"></i>
+                                        <span>Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ideas" class="ideas-section">
+                <div class="ideas-container">
+                    <div class="ideas-header animate-in">
+                        <div class="ideas-title">
+                            <i class="fas fa-lightbulb ideas-icon"></i>
+                            <h2>Unique Ideas</h2>
+                        </div>
+                        <p class="ideas-subtitle">Creative upgrades planned for portfolio and project storytelling</p>
+                    </div>
+
+                    <div class="ideas-grid">
+                        <article class="idea-card animate-in" style="animation-delay: 0.05s;">
+                            <div class="idea-head">
+                                <i class="fas fa-route"></i>
+                                <h3>Learning Journey Timeline</h3>
+                            </div>
+                            <p>Interactive milestone timeline connecting certifications, projects, and skills with progress highlights.</p>
+                        </article>
+
+                        <article class="idea-card animate-in" style="animation-delay: 0.1s;">
+                            <div class="idea-head">
+                                <i class="fas fa-pen-nib"></i>
+                                <h3>Project Story Blog</h3>
+                            </div>
+                            <p>Add short build stories for each project explaining challenge, approach, and final result in simple language.</p>
+                        </article>
+
+                        <article class="idea-card animate-in" style="animation-delay: 0.15s;">
+                            <div class="idea-head">
+                                <i class="fas fa-code-branch"></i>
+                                <h3>Open Source Contribution Wall</h3>
+                            </div>
+                            <p>Show your top GitHub contributions with repository name, commit count, and technology stack.</p>
+                        </article>
+
+                        <article class="idea-card animate-in" style="animation-delay: 0.2s;">
+                            <div class="idea-head">
+                                <i class="fas fa-calendar-check"></i>
+                                <h3>Weekly Build Log</h3>
+                            </div>
+                            <p>Post weekly updates showing what you learned and shipped to keep the portfolio actively fresh.</p>
+                        </article>
                     </div>
                 </div>
             </section>

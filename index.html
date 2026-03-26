@@ -15,12 +15,20 @@
     <link rel="stylesheet" href="css/objective-section.css">
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/projects-section.css">
+    <link rel="stylesheet" href="css/ideas-section.css">
     <link rel="stylesheet" href="css/certifications-section.css">
     <link rel="stylesheet" href="css/education-section.css">
     <link rel="stylesheet" href="css/contact-section.css">
+    <link rel="stylesheet" href="css/background-3d.css">
 </head>
 
 <body>
+    <div class="background-3d" aria-hidden="true">
+        <canvas id="background3dCanvas" class="background-3d__canvas"></canvas>
+        <div class="background-3d__glow background-3d__glow--one"></div>
+        <div class="background-3d__glow background-3d__glow--two"></div>
+        <div class="background-3d__grid"></div>
+    </div>
 
 
     <!-- Navigation Bar -->
@@ -67,16 +75,15 @@
                             <h1 class="profile-name">Bablu Kumar Sharma</h1>
                             <h2 class="profile-title">I am a
                                 <span class="profile-title-rotate">
-                                    <span style="--i:4;" data-text="Data Analyst">Data Analyst</span>
-                                    <span style="--i:3;" data-text="Data Engineer">Data Engineer</span>
-                                    <span style="--i:2;" data-text="Full Stack Developer">Full Stack Developer</span>
+                                    <span style="--i:3;" data-text="Data Analyst">Data Analyst</span>
+                                    <span style="--i:2;" data-text="MERN Developer">MERN Developer</span>
                                     <span style="--i:1;" data-text="UI Designer">UI Designer</span>
                                 </span>
                             </h2>
                             <p class="profile-description">
-                               Aspiring Data Scientist skilled in predictive analytics and data analysis with Power BI
-                                and Excel. Passionate about turning data into actionable insights and seeking
-                                opportunities to apply my skills in real-world projects.
+                               Aspiring Data Scientist currently expanding into MERN Stack development. 
+                               Skilled in predictive analytics and data analysis using Power BI and Excel, 
+                               with a passion for creating data-driven web applications.
                             </p>
                             <div class="btn-sci">
                                 <a href="assets/Bablu_Kumar_CV.pdf" target="_blank" rel="noopener noreferrer"
@@ -304,38 +311,109 @@
 
                     <!-- Projects Grid -->
                     <div class="projects-grid">
-                        <div class="project-card animate-in">
+                        <div class="project-card animate-in" style="animation-delay: 0.1s;">
                             <div class="project-image-container">
-                                <img src="assets/Obesity.png" alt="TubeAcademy" class="project-image">
+                                <img src="assets/newproject.png" alt="LeaveFlow" class="project-image">
                                 <div class="project-image-overlay"></div>
+                                <span class="project-badge">Full Stack</span>
                             </div>
 
                             <div class="project-details">
-                                <h3 class="project-title">Obesity Prediction Using Machine Learning</h3>
+                                <h3 class="project-title">LeaveFlow – Full Stack Leave Management System</h3>
                                 <ul class="project-description">
                                     <li class="project-description-item">
                                         <span class="bullet-point"></span>
-                                        Developed a machine learning–based system to predict obesity levels using eating
-                                        habits, physical activity, and lifestyle data.
-                                        The project applies predictive analytics to identify obesity risk categories and
-                                        compare multiple classification models to determine the most accurate predictor.
-                                        An interactive dashboard was also created to visualize model performance and
-                                        predictions.
+                                        Built a role-based leave management platform with Admin, Manager, and Employee
+                                        workflows. It supports JWT authentication, protected routes, leave apply/approval
+                                        flow, and analytics dashboards using a modern MERN architecture.
                                     </li>
                                 </ul>
 
                                 <!-- Technologies -->
                                 <div class="project-technologies">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Pandas, NumPy – data manipulation and analysis</span>
-                                    <span class="tech-tag">Matplotlib, Seaborn – data visualization</span>
-                                    <span class="tech-tag">Scikit-learn – machine learning models and evaluation</span>
-                                    <span class="tech-tag">Tkinter – GUI dashboard development</span>
+                                    <span class="tech-tag">React (Vite)</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Express.js</span>
+                                    <span class="tech-tag">MongoDB Atlas</span>
+                                    <span class="tech-tag">JWT Auth + RBAC</span>
                                 </div>
 
                                 <!-- Links -->
                                 <div class="project-links">
-                                    <a href="https://github.com/anmolkrjee/Obesity-prediction-using-ML" target="_blank"
+                                    <a href="https://github.com/bksharma1729/leaveflow" target="_blank"
+                                        rel="noopener noreferrer" class="project-link github-link">
+                                        <i class="fab fa-github link-icon"></i>
+                                        <span>Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card animate-in" style="animation-delay: 0.25s;">
+                            <div class="project-image-container">
+                                <img src="assets/project2.png" alt="Customer Churn Prediction Using Machine Learning" class="project-image">
+                                <div class="project-image-overlay"></div>
+                                <span class="project-badge">ML Project</span>
+                            </div>
+
+                            <div class="project-details">
+                                <h3 class="project-title">Customer Churn Prediction Using Machine Learning</h3>
+                                <ul class="project-description">
+                                    <li class="project-description-item">
+                                        <span class="bullet-point"></span>
+                                        Developed a machine learning based system to predict customer churn using behavioral data,
+                                        service usage patterns, and customer demographics. Multiple classification models were trained
+                                        and evaluated to identify the most accurate predictor, with an interactive dashboard for
+                                        model performance, churn insights, and business decision making.
+                                    </li>
+                                </ul>
+
+                                <div class="project-technologies">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Pandas, NumPy</span>
+                                    <span class="tech-tag">Matplotlib, Seaborn</span>
+                                    <span class="tech-tag">Scikit-learn</span>
+                                    <span class="tech-tag">Tkinter / Streamlit</span>
+                                </div>
+
+                                <div class="project-links">
+                                    <a href="https://github.com/bksharma1729/Customer-Churn-Prediction-Using-Machine-Learning" target="_blank"
+                                        rel="noopener noreferrer" class="project-link github-link">
+                                        <i class="fab fa-github link-icon"></i>
+                                        <span>Code</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card animate-in" style="animation-delay: 0.4s;">
+                            <div class="project-image-container">
+                                <img src="assets/project3.png" alt="Finance Tracker" class="project-image">
+                                <div class="project-image-overlay"></div>
+                                <span class="project-badge">FinTech</span>
+                            </div>
+
+                            <div class="project-details">
+                                <h3 class="project-title">Finance Tracker</h3>
+                                <ul class="project-description">
+                                    <li class="project-description-item">
+                                        <span class="bullet-point"></span>
+                                        Developed a personal finance tracking application to manage income, expenses,
+                                        and category-wise spending trends. The project provides clean dashboards for
+                                        transaction insights, budget monitoring, and better day-to-day financial planning.
+                                    </li>
+                                </ul>
+
+                                <div class="project-technologies">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Express.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">REST API</span>
+                                </div>
+
+                                <div class="project-links">
+                                    <a href="https://github.com/bksharma1729/Finance-Tracker" target="_blank"
                                         rel="noopener noreferrer" class="project-link github-link">
                                         <i class="fab fa-github link-icon"></i>
                                         <span>Code</span>
@@ -344,6 +422,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
                     <!-- Certifications Section -->
                     <section id="certifications" class="certifications-section">
                         <div class="certifications-container">
@@ -712,6 +793,7 @@
         window.addEventListener('scroll', setActiveNav);
         window.addEventListener('load', setActiveNav);
     </script>
+    <script src="js/background-3d.js"></script>
 </body>
 
 </html>

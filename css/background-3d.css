@@ -1,0 +1,131 @@
+.background-3d {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(170, 255, 0, 0.14), transparent 30%),
+    radial-gradient(circle at 80% 18%, rgba(184, 255, 51, 0.12), transparent 24%),
+    radial-gradient(circle at 50% 75%, rgba(36, 61, 59, 0.5), transparent 42%),
+    linear-gradient(180deg, #1b2823 0%, #1b2823 100%);
+}
+
+.background-3d__canvas,
+.background-3d__grid,
+.background-3d__glow {
+  position: absolute;
+  inset: 0;
+}
+
+.background-3d__canvas {
+  width: 100%;
+  height: 100%;
+  opacity: 0.95;
+}
+
+.background-3d__grid {
+  background:
+    linear-gradient(rgba(170, 255, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(170, 255, 0, 0.08) 1px, transparent 1px);
+  background-size: 90px 90px;
+  transform-origin: center bottom;
+  transform: perspective(1200px) rotateX(74deg) scale(1.75) translateY(22%);
+  opacity: 0.24;
+}
+
+.background-3d__glow {
+  filter: blur(50px);
+  opacity: 0.36;
+}
+
+.background-3d__glow--one {
+  background: radial-gradient(circle, rgba(170, 255, 0, 0.28) 0%, transparent 65%);
+  transform: translate3d(-10%, -12%, 0) scale(0.9);
+  animation: driftGlowOne 18s ease-in-out infinite alternate;
+}
+
+.background-3d__glow--two {
+  background: radial-gradient(circle, rgba(184, 255, 51, 0.2) 0%, transparent 60%);
+  transform: translate3d(42%, 8%, 0) scale(1.05);
+  animation: driftGlowTwo 22s ease-in-out infinite alternate;
+}
+
+.portfolio-app {
+  background: transparent;
+}
+
+.portfolio-app::before {
+  display: none;
+}
+
+.profile-section,
+.objective-section,
+.skills-section,
+.projects-section,
+.ideas-section,
+.certifications-section,
+.education-section,
+.contact-section {
+  background: rgba(27, 40, 35, 0.7) !important;
+}
+
+.navigation {
+  background: rgba(27, 40, 35, 0.72);
+}
+
+.bars-animation {
+  z-index: -2;
+  pointer-events: none;
+}
+
+.bars-animation .bar {
+  background: rgba(27, 40, 35, 0.88);
+}
+
+@keyframes driftGlowOne {
+  from {
+    transform: translate3d(-10%, -12%, 0) scale(0.9);
+  }
+  to {
+    transform: translate3d(8%, 4%, 0) scale(1.15);
+  }
+}
+
+@keyframes driftGlowTwo {
+  from {
+    transform: translate3d(42%, 8%, 0) scale(1.05);
+  }
+  to {
+    transform: translate3d(18%, -6%, 0) scale(0.88);
+  }
+}
+
+@media (max-width: 768px) {
+  .background-3d__grid {
+    background-size: 56px 56px;
+    transform: perspective(900px) rotateX(76deg) scale(2.1) translateY(28%);
+    opacity: 0.18;
+  }
+
+  .profile-section,
+  .objective-section,
+  .skills-section,
+  .projects-section,
+  .ideas-section,
+  .certifications-section,
+  .education-section,
+  .contact-section {
+    background: rgba(27, 40, 35, 0.76) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .background-3d__glow {
+    animation: none;
+  }
+
+  .background-3d__canvas {
+    opacity: 0.6;
+  }
+}

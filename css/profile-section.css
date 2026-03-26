@@ -95,7 +95,7 @@
 .profile-title-rotate {
   position: relative;
   display: inline-block;
-  min-width: 22ch;
+  min-width: 15ch;
   height: 1.4em;
   vertical-align: middle;
 }
@@ -107,16 +107,16 @@
   display: inline-block;
   color: transparent;
   -webkit-text-stroke: 0.7px #adff2f;
-  animation: display-text 16s linear infinite;
+  animation: display-text 12s linear infinite;
   animation-delay: calc(-4s * var(--i));
 }
 
 @keyframes display-text {
   0%,
-  24% {
+  30% {
     visibility: visible;
   }
-  25%,
+  33%,
   100% {
     visibility: hidden;
   }
