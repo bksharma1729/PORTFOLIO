@@ -8,10 +8,22 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/projects-section.css">
     <link rel="stylesheet" href="css/ideas-section.css">
+    <link rel="stylesheet" href="css/innovation-features.css">
 </head>
 <body>
     <div class="portfolio-app">
         <main>
+            <section class="view-switcher-section">
+                <div class="view-switcher-wrap">
+                    <span class="view-switcher-label"><i class="fas fa-eye"></i> Portfolio View</span>
+                    <div class="view-switcher" role="tablist" aria-label="Portfolio views">
+                        <button class="view-btn active" data-view="recruiter" type="button">Recruiter</button>
+                        <button class="view-btn" data-view="client" type="button">Client</button>
+                        <button class="view-btn" data-view="developer" type="button">Developer</button>
+                    </div>
+                </div>
+            </section>
+
             <section id="projects" class="projects-section">
                 <div class="projects-container">
                     <!-- Header -->
@@ -27,7 +39,7 @@
 
                     <!-- Projects Grid -->
                     <div class="projects-grid">
-                        <div class="project-card animate-in" style="animation-delay: 0.1s;">
+                        <div class="project-card animate-in" data-project-id="leaveflow" style="animation-delay: 0.1s;">
                             <div class="project-image-container">
                                 <img src="assets/newproject.png" alt="LeaveFlow" class="project-image">
                                 <div class="project-image-overlay"></div>
@@ -36,6 +48,11 @@
 
                             <div class="project-details">
                                 <h3 class="project-title">LeaveFlow – Full Stack Leave Management System</h3>
+                                <div class="project-metrics">
+                                    <span class="metric-chip">Role Modules: 3</span>
+                                    <span class="metric-chip">Auth: JWT + RBAC</span>
+                                    <span class="metric-chip">API Layer: Centralized</span>
+                                </div>
                                 <ul class="project-description">
                                     <li class="project-description-item">
                                         <span class="bullet-point"></span>
@@ -62,11 +79,19 @@
                                         <i class="fab fa-github link-icon"></i>
                                         <span>Code</span>
                                     </a>
+                                    <button class="project-link case-link" type="button" data-case-study="leaveflow">
+                                        <i class="fas fa-file-pdf link-icon"></i>
+                                        <span>Case Study PDF</span>
+                                    </button>
+                                    <button class="project-link demo-link sandbox-link" type="button" data-sandbox="leaveflow">
+                                        <i class="fas fa-vial link-icon"></i>
+                                        <span>Sandbox</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="project-card animate-in" style="animation-delay: 0.25s;">
+                        <div class="project-card animate-in" data-project-id="churn" style="animation-delay: 0.25s;">
                             <div class="project-image-container">
                                 <img src="assets/project2.png" alt="Customer Churn Prediction Using Machine Learning" class="project-image">
                                 <div class="project-image-overlay"></div>
@@ -75,6 +100,11 @@
 
                             <div class="project-details">
                                 <h3 class="project-title">Customer Churn Prediction Using Machine Learning</h3>
+                                <div class="project-metrics">
+                                    <span class="metric-chip">Best Accuracy: 0.89</span>
+                                    <span class="metric-chip">Models Compared: 4</span>
+                                    <span class="metric-chip">Use Case: Retention</span>
+                                </div>
                                 <ul class="project-description">
                                     <li class="project-description-item">
                                         <span class="bullet-point"></span>
@@ -98,11 +128,19 @@
                                         <i class="fab fa-github link-icon"></i>
                                         <span>Code</span>
                                     </a>
+                                    <button class="project-link case-link" type="button" data-case-study="churn">
+                                        <i class="fas fa-file-pdf link-icon"></i>
+                                        <span>Case Study PDF</span>
+                                    </button>
+                                    <button class="project-link demo-link sandbox-link" type="button" data-sandbox="churn">
+                                        <i class="fas fa-vial link-icon"></i>
+                                        <span>Sandbox</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="project-card animate-in" style="animation-delay: 0.4s;">
+                        <div class="project-card animate-in" data-project-id="finance" style="animation-delay: 0.4s;">
                             <div class="project-image-container">
                                 <img src="assets/project3.png" alt="Finance Tracker" class="project-image">
                                 <div class="project-image-overlay"></div>
@@ -111,6 +149,11 @@
 
                             <div class="project-details">
                                 <h3 class="project-title">Finance Tracker</h3>
+                                <div class="project-metrics">
+                                    <span class="metric-chip">Expense Categories: Smart</span>
+                                    <span class="metric-chip">Insights: Real-time</span>
+                                    <span class="metric-chip">Goal: Budget Control</span>
+                                </div>
                                 <ul class="project-description">
                                     <li class="project-description-item">
                                         <span class="bullet-point"></span>
@@ -133,6 +176,14 @@
                                         <i class="fab fa-github link-icon"></i>
                                         <span>Code</span>
                                     </a>
+                                    <button class="project-link case-link" type="button" data-case-study="finance">
+                                        <i class="fas fa-file-pdf link-icon"></i>
+                                        <span>Case Study PDF</span>
+                                    </button>
+                                    <button class="project-link demo-link sandbox-link" type="button" data-sandbox="finance">
+                                        <i class="fas fa-vial link-icon"></i>
+                                        <span>Sandbox</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -153,39 +204,78 @@
                     <div class="ideas-grid">
                         <article class="idea-card animate-in" style="animation-delay: 0.05s;">
                             <div class="idea-head">
+                                <i class="fas fa-user-check"></i>
+                                <h3>Role-Based Portfolio View</h3>
+                            </div>
+                            <p>Show curated content modes like Recruiter View, Client View, and Developer View using quick toggles.</p>
+                        </article>
+
+                        <article class="idea-card animate-in" style="animation-delay: 0.1s;">
+                            <div class="idea-head">
                                 <i class="fas fa-route"></i>
                                 <h3>Learning Journey Timeline</h3>
                             </div>
                             <p>Interactive milestone timeline connecting certifications, projects, and skills with progress highlights.</p>
                         </article>
 
-                        <article class="idea-card animate-in" style="animation-delay: 0.1s;">
-                            <div class="idea-head">
-                                <i class="fas fa-pen-nib"></i>
-                                <h3>Project Story Blog</h3>
-                            </div>
-                            <p>Add short build stories for each project explaining challenge, approach, and final result in simple language.</p>
-                        </article>
-
                         <article class="idea-card animate-in" style="animation-delay: 0.15s;">
                             <div class="idea-head">
-                                <i class="fas fa-code-branch"></i>
-                                <h3>Open Source Contribution Wall</h3>
+                                <i class="fas fa-chart-line"></i>
+                                <h3>Impact Metrics Layer</h3>
                             </div>
-                            <p>Show your top GitHub contributions with repository name, commit count, and technology stack.</p>
+                            <p>Add measurable impact chips on each project like accuracy, performance gain, and business outcomes.</p>
                         </article>
 
                         <article class="idea-card animate-in" style="animation-delay: 0.2s;">
                             <div class="idea-head">
-                                <i class="fas fa-calendar-check"></i>
-                                <h3>Weekly Build Log</h3>
+                                <i class="fas fa-file-export"></i>
+                                <h3>One-Click Case Study PDF</h3>
                             </div>
-                            <p>Post weekly updates showing what you learned and shipped to keep the portfolio actively fresh.</p>
+                            <p>Generate a compact one-page project summary PDF directly from each project card.</p>
                         </article>
+
+                        <article class="idea-card animate-in" style="animation-delay: 0.25s;">
+                            <div class="idea-head">
+                                <i class="fas fa-comments"></i>
+                                <h3>Ask-My-Portfolio Assistant</h3>
+                            </div>
+                            <p>Embedded mini assistant answering questions about your skills, projects, and technical decisions.</p>
+                        </article>
+
+                        <article class="idea-card animate-in" style="animation-delay: 0.3s;">
+                            <div class="idea-head">
+                                <i class="fas fa-vial"></i>
+                                <h3>Live Demo Sandbox</h3>
+                            </div>
+                            <p>Interactive sandbox previews for selected projects to test workflows without leaving the portfolio.</p>
+                        </article>
+                    </div>
+
+                    <div class="journey-timeline-wrap animate-in">
+                        <h3 class="journey-title">Learning Journey Timeline</h3>
+                        <div class="journey-timeline">
+                            <div class="journey-item">
+                                <span class="journey-year">2023</span>
+                                <p>Strong foundations in Java, DSA, and core programming.</p>
+                            </div>
+                            <div class="journey-item">
+                                <span class="journey-year">2024</span>
+                                <p>Moved into data analysis with Python, Excel, and Power BI.</p>
+                            </div>
+                            <div class="journey-item">
+                                <span class="journey-year">2025</span>
+                                <p>Built ML projects and analytics dashboards for practical insights.</p>
+                            </div>
+                            <div class="journey-item">
+                                <span class="journey-year">2026</span>
+                                <p>Expanded to MERN full-stack apps with secure role-based workflows.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
     </div>
+    <script src="js/innovation-features.js"></script>
 </body>
 </html>
