@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/education-section.css">
     <link rel="stylesheet" href="css/contact-section.css">
     <link rel="stylesheet" href="css/background-3d.css">
+    <link rel="stylesheet" href="css/theme-toggle.css">
 </head>
 
 <body>
@@ -41,16 +42,25 @@
                 </div>
 
                 <!-- Desktop Navigation -->
-                <div class="nav-desktop">
-                    <ul class="nav-links">
-                        <li><a href="#profile" class="nav-link">Home</a></li>
-                        <li><a href="#objective" class="nav-link">About</a></li>
-                        <li><a href="#skills" class="nav-link">Skills</a></li>
-                        <li><a href="#projects" class="nav-link">Project</a></li>
-                        <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                        <li><a href="#education" class="nav-link">Education</a></li>
-                        <li><a href="#contact" class="nav-link">Contact</a></li>
-                    </ul>
+                <div class="nav-actions">
+                    <div class="nav-desktop">
+                        <ul class="nav-links">
+                            <li><a href="#profile" class="nav-link">Overview</a></li>
+                            <li><a href="#objective" class="nav-link">Profile</a></li>
+                            <li><a href="#skills" class="nav-link">Capabilities</a></li>
+                            <li><a href="#projects" class="nav-link">Projects</a></li>
+                            <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                            <li><a href="#education" class="nav-link">Journey</a></li>
+                            <li><a href="#contact" class="nav-link">Connect</a></li>
+                        </ul>
+                    </div>
+                    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to white theme">
+                        <span class="theme-toggle__label theme-toggle__label--default">Default</span>
+                        <span class="theme-toggle__track" aria-hidden="true">
+                            <span class="theme-toggle__thumb"></span>
+                        </span>
+                        <span class="theme-toggle__label theme-toggle__label--light">White</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -76,17 +86,41 @@
                                 <span class="profile-title-rotate">
                                     <span style="--i:3;" data-text="Data Analyst">Data Analyst</span>
                                     <span style="--i:2;" data-text="MERN Developer">MERN Developer</span>
-                                    <span style="--i:1;" data-text="UI Designer">UI Designer</span>
+                                    <span style="--i:1;" data-text="Frontend Builder">Frontend Builder</span>
                                 </span>
                             </h2>
                             <p class="profile-description">
-                               Aspiring Data Scientist currently expanding into MERN Stack development. 
-                               Skilled in predictive analytics and data analysis using Power BI and Excel, 
-                               with a passion for creating data-driven web applications.
+                               Aspiring Data Analyst and MERN developer focused on turning data into clear insights
+                               and building web experiences that feel useful, fast, and thoughtful.
                             </p>
+                            <div class="profile-signal-box">
+                                <div class="profile-signal-head">
+                                    <span class="profile-signal-kicker">Quick Snapshot</span>
+                                    <h3>What I bring to the table</h3>
+                                </div>
+                                <div class="profile-pill-row">
+                                    <span class="profile-pill"><i class="fas fa-chart-simple"></i> Analytics-first</span>
+                                    <span class="profile-pill"><i class="fas fa-layer-group"></i> Full-stack learner</span>
+                                    <span class="profile-pill"><i class="fas fa-briefcase"></i> Open to internships</span>
+                                </div>
+                                <div class="profile-stats-grid">
+                                    <article class="profile-stat-card">
+                                        <span class="profile-stat-value">3</span>
+                                        <span class="profile-stat-label">Portfolio projects showcased</span>
+                                    </article>
+                                    <article class="profile-stat-card">
+                                        <span class="profile-stat-value">4+</span>
+                                        <span class="profile-stat-label">Certifications highlighted</span>
+                                    </article>
+                                    <article class="profile-stat-card">
+                                        <span class="profile-stat-value">2</span>
+                                        <span class="profile-stat-label">Core tracks: analytics and web</span>
+                                    </article>
+                                </div>
+                            </div>
                             <div class="btn-sci">
                                 <a href="assets/Bablu_Kumar_CV.pdf" target="_blank" rel="noopener noreferrer"
-                                    class="btn-download-cv">Download CV</a>
+                                    class="btn-download-cv">View Resume</a>
                                 <div class="social-links">
                                     <div class="tooltip-container">
                                         <a href="https://github.com/bksharma1729" target="_blank"
@@ -102,29 +136,38 @@
                                         </a>
                                         <span class="tooltip">LinkedIn</span>
                                     </div>
-                                    <div class="tooltip-container">
+                                    <!-- <div class="tooltip-container">
                                         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
                                             class="social-link twitter">
                                             <i class="fab fa-twitter social-icon"></i>
                                         </a>
                                         <span class="tooltip">Twitter</span>
-                                    </div>
-                                    <div class="tooltip-container">
+                                    </div> -->
+                                    <!-- <div class="tooltip-container">
                                         <a href="https://www.youtube.com/@RanDomVDoo" target="_blank"
                                             rel="noopener noreferrer" class="social-link youtube">
                                             <i class="fab fa-youtube social-icon"></i>
                                         </a>
                                         <span class="tooltip">YouTube</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="profile-image-container animate-in">
                             <div class="profile-image-wrapper">
                                 <div class="profile-image-inner">
-                                    <img src="assets/bablu_kumar.png" alt="Bablu Kumar Sharma" class="profile-image">
+                                    <img src="assets/bablu_kumar.png" alt="Bablu Kumar Sharma" class="profile-image" loading="eager" decoding="async" fetchpriority="high">
                                 </div>
                             </div>
+                            <aside class="profile-focus-card">
+                                <span class="profile-focus-label">Current Focus</span>
+                                <h3>Building projects where data insight meets clean product execution.</h3>
+                                <ul class="profile-focus-list">
+                                    <li>Analytics dashboards that turn numbers into decisions</li>
+                                    <li>MERN apps with secure, role-based user flows</li>
+                                    <li>Portfolio and product experiences that communicate clearly</li>
+                                </ul>
+                            </aside>
                         </div>
                     </div>
                 </div>
@@ -136,17 +179,82 @@
                     <div class="objective-header animate-in">
                         <div class="objective-title">
                             <i class="fas fa-bullseye objective-icon"></i>
-                            <h2>Career Objective</h2>
+                            <h2>Professional Direction</h2>
                         </div>
                     </div>
 
                     <div class="objective-content animate-in">
                         <p class="objective-text">
-                            Results-driven Data Analyst with practical knowledge of Power BI, Advanced Excel, and Python
-                            for data analysis, visualization, and reporting. Possess basic front-end development skills
-                            using HTML, CSS, and JavaScript to support interactive data presentations. Seeking
-                            opportunities to gain industry exposure and contribute to data-driven decision-making
-                            processes. </p>
+                            Results-driven Data Analyst with hands-on experience in Python, Power BI, and Advanced
+                            Excel for analysis, reporting, and visualization. Also growing in web development to build
+                            interfaces that make data easier to explore, understand, and use. </p>
+                        <div class="focus-grid">
+                            <article class="focus-card">
+                                <div class="focus-card-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+                                <h3>Data to Decisions</h3>
+                                <p>I enjoy turning raw data into patterns, dashboards, and recommendations people can actually use.</p>
+                            </article>
+                            <article class="focus-card">
+                                <div class="focus-card-icon"><i class="fas fa-code-branch"></i></div>
+                                <h3>Build and Explain</h3>
+                                <p>I combine analysis with frontend skills so the final output is not only correct, but also easy to understand.</p>
+                            </article>
+                            <article class="focus-card">
+                                <div class="focus-card-icon"><i class="fas fa-rocket"></i></div>
+                                <h3>Ready for Growth</h3>
+                                <p>I am looking for internship and entry-level roles where I can contribute, learn fast, and grow with strong teams.</p>
+                            </article>
+                        </div>
+                        <div class="brand-panels">
+                            <article class="brand-panel why-me-panel">
+                                <div class="brand-panel-header">
+                                    <span class="brand-panel-kicker">Why Me</span>
+                                    <h3>A blend of clarity, curiosity, and execution</h3>
+                                </div>
+                                <div class="why-me-grid">
+                                    <div class="why-me-item">
+                                        <strong>Data Thinking</strong>
+                                        <p>I look for patterns, meaning, and decisions behind the numbers.</p>
+                                    </div>
+                                    <div class="why-me-item">
+                                        <strong>Product Mindset</strong>
+                                        <p>I care about how insights are presented, understood, and used.</p>
+                                    </div>
+                                    <div class="why-me-item">
+                                        <strong>Execution Focus</strong>
+                                        <p>I enjoy taking ideas from concept to working, visible outcomes.</p>
+                                    </div>
+                                </div>
+                            </article>
+                            <aside class="brand-panel quick-scan-panel">
+                                <div class="brand-panel-header">
+                                    <span class="brand-panel-kicker">Recruiter Quick Scan</span>
+                                    <h3>The essentials at a glance</h3>
+                                </div>
+                                <div class="quick-scan-list">
+                                    <div class="quick-scan-row">
+                                        <span>Role Interest</span>
+                                        <strong>Data Analyst, MERN Intern</strong>
+                                    </div>
+                                    <div class="quick-scan-row">
+                                        <span>Graduation</span>
+                                        <strong>2027</strong>
+                                    </div>
+                                    <div class="quick-scan-row">
+                                        <span>Core Stack</span>
+                                        <strong>Python, Power BI, Excel, React</strong>
+                                    </div>
+                                    <div class="quick-scan-row">
+                                        <span>Strength</span>
+                                        <strong>Analytics with product thinking</strong>
+                                    </div>
+                                    <div class="quick-scan-row">
+                                        <span>Working Style</span>
+                                        <strong>Curious, structured, hands-on</strong>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -154,9 +262,9 @@
             <!-- Skills Section -->
             <section id="skills" class="skills-section">
                 <div class="skills-header animate-in">
-                    <h2 class="skills-headings">My Skills</h2>
+                    <h2 class="skills-headings">Skills</h2>
                     <p class="skills-subtitle">
-                        Technologies and tools I work with to create amazing digital experiences
+                        A practical toolkit across analytics, development, and modern problem solving
                     </p>
                 </div>
 
@@ -166,7 +274,7 @@
                             <i class="fa-brands fa-java skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Java</h4>
-                        <p class="skill-description"></p>
+                        <p class="skill-description">Core programming and problem solving</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -175,7 +283,7 @@
                             <i class="fab fa-js-square skill-icon"></i>
                         </div>
                         <h4 class="skill-name">JavaScript</h4>
-                        <p class="skill-description">ES6+ & DOM manipulation</p>
+                        <p class="skill-description">Interactive web interfaces and logic</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -184,7 +292,7 @@
                             <i class="fab fa-html5 skill-icon"></i>
                         </div>
                         <h4 class="skill-name">HTML5</h4>
-                        <p class="skill-description">Semantic markup</p>
+                        <p class="skill-description">Structured, accessible page architecture</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -193,7 +301,7 @@
                             <i class="fab fa-css3-alt skill-icon"></i>
                         </div>
                         <h4 class="skill-name">CSS3</h4>
-                        <p class="skill-description">Responsive design</p>
+                        <p class="skill-description">Responsive layouts and polished UI styling</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -202,7 +310,7 @@
                             <i class="fab fa-python skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Python</h4>
-                        <p class="skill-description">Data analysis</p>
+                        <p class="skill-description">Analysis, automation, and model experimentation</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -211,7 +319,7 @@
                             <i class="fas fa-file-excel skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Excel</h4>
-                        <p class="skill-description">Data analysis & reporting</p>
+                        <p class="skill-description">Reporting, cleaning, and business-ready analysis</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -220,7 +328,7 @@
                             <i class="fas fa-chart-line skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Power BI</h4>
-                        <p class="skill-description">Dashboards & data visualization</p>
+                        <p class="skill-description">Insightful dashboards and decision support</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -230,7 +338,7 @@
                             <i class="fas fa-book-open skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Jupyter Notebook</h4>
-                        <p class="skill-description">Data analysis & visualization</p>
+                        <p class="skill-description">Exploration, analysis, and data storytelling</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -239,7 +347,7 @@
                             <i class="fas fa-cloud skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Google Colab</h4>
-                        <p class="skill-description">Cloud-based Python notebooks</p>
+                        <p class="skill-description">Cloud notebooks for fast experimentation</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -249,7 +357,7 @@
                             <i class="fas fa-laptop-code skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Spyder</h4>
-                        <p class="skill-description">Python IDE for data analysis</p>
+                        <p class="skill-description">Focused Python workflow for analytical work</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -261,7 +369,7 @@
                             <i class="fab fa-git-alt skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Git</h4>
-                        <p class="skill-description">Version control</p>
+                        <p class="skill-description">Version control and collaboration workflow</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -270,7 +378,7 @@
                             <i class="fab fa-github skill-icon"></i>
                         </div>
                         <h4 class="skill-name">GitHub</h4>
-                        <p class="skill-description">Code collaboration</p>
+                        <p class="skill-description">Code hosting, visibility, and team collaboration</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -279,7 +387,7 @@
                             <i class="fas fa-code skill-icon"></i>
                         </div>
                         <h4 class="skill-name">VS Code</h4>
-                        <p class="skill-description">Code editor</p>
+                        <p class="skill-description">Primary environment for development work</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -304,7 +412,7 @@
                             <h2>Projects</h2>
                         </div>
                         <p class="projects-subtitle">
-                            Some of my recent work showcasing different technologies and solutions
+                            Selected work that reflects how I approach data, product thinking, and implementation
                         </p>
                     </div>
 
@@ -312,9 +420,9 @@
                     <div class="projects-grid">
                         <div class="project-card animate-in" style="animation-delay: 0.1s;">
                             <div class="project-image-container">
-                                <img src="assets/newproject.png" alt="LeaveFlow" class="project-image">
+                                <img src="assets/newproject.png" alt="LeaveFlow" class="project-image" loading="lazy" decoding="async">
                                 <div class="project-image-overlay"></div>
-                                <span class="project-badge">Full Stack</span>
+                                <span class="project-badge">Flagship Build</span>
                             </div>
 
                             <div class="project-details">
@@ -322,9 +430,9 @@
                                 <ul class="project-description">
                                     <li class="project-description-item">
                                         <span class="bullet-point"></span>
-                                        Full-stack role-based leave management system with Admin, Manager, and Employee modules.
-                                        Includes JWT authentication, role-based authorization middleware, protected routes,
-                                        centralized Axios API handling, leave approval workflow, and dashboard analytics.
+                                        A full-stack leave management platform with Admin, Manager, and Employee workflows.
+                                        Built with JWT authentication, role-based access control, protected routes, centralized
+                                        API handling, and streamlined approval flows.
                                     </li>
                                 </ul>
 
@@ -344,7 +452,7 @@
                                     <a href="https://github.com/bksharma1729/leaveflow" target="_blank"
                                         rel="noopener noreferrer" class="project-link github-link">
                                         <i class="fab fa-github link-icon"></i>
-                                        <span>Code</span>
+                                        <span>Source</span>
                                     </a>
                                 </div>
                             </div>
@@ -352,9 +460,9 @@
 
                         <div class="project-card animate-in" style="animation-delay: 0.25s;">
                             <div class="project-image-container">
-                                <img src="assets/project2.png" alt="Customer Churn Prediction Using Machine Learning" class="project-image">
+                                <img src="assets/project2.png" alt="Customer Churn Prediction Using Machine Learning" class="project-image" loading="lazy" decoding="async">
                                 <div class="project-image-overlay"></div>
-                                <span class="project-badge">ML Project</span>
+                                <span class="project-badge">Machine Learning</span>
                             </div>
 
                             <div class="project-details">
@@ -362,10 +470,9 @@
                                 <ul class="project-description">
                                     <li class="project-description-item">
                                         <span class="bullet-point"></span>
-                                        Developed a machine learning based system to predict customer churn using behavioral data,
-                                        service usage patterns, and customer demographics. Multiple classification models were trained
-                                        and evaluated to identify the most accurate predictor, with an interactive dashboard for
-                                        model performance, churn insights, and business decision making.
+                                        A machine learning project focused on predicting customer churn from behavioral,
+                                        service, and demographic data. Multiple models were compared and evaluated, with
+                                        results presented through a dashboard designed for actionable business insight.
                                     </li>
                                 </ul>
 
@@ -381,7 +488,7 @@
                                     <a href="https://github.com/bksharma1729/Customer-Churn-Prediction-Using-Machine-Learning" target="_blank"
                                         rel="noopener noreferrer" class="project-link github-link">
                                         <i class="fab fa-github link-icon"></i>
-                                        <span>Code</span>
+                                        <span>Source</span>
                                     </a>
                                 </div>
                             </div>
@@ -389,9 +496,9 @@
 
                         <div class="project-card animate-in" style="animation-delay: 0.4s;">
                             <div class="project-image-container">
-                                <img src="assets/project3.png" alt="Finance Tracker" class="project-image">
+                                <img src="assets/project3.png" alt="Finance Tracker" class="project-image" loading="lazy" decoding="async">
                                 <div class="project-image-overlay"></div>
-                                <span class="project-badge">FinTech</span>
+                                <span class="project-badge">Finance Product</span>
                             </div>
 
                             <div class="project-details">
@@ -399,9 +506,9 @@
                                 <ul class="project-description">
                                     <li class="project-description-item">
                                         <span class="bullet-point"></span>
-                                        Developed a personal finance tracking application to manage income, expenses,
-                                        and category-wise spending trends. The project provides clean dashboards for
-                                        transaction insights, budget monitoring, and better day-to-day financial planning.
+                                        A personal finance application for tracking income, expenses, and category-wise
+                                        spending. Designed to provide clear dashboards, better budget visibility, and
+                                        more confident day-to-day financial decisions.
                                     </li>
                                 </ul>
 
@@ -417,7 +524,7 @@
                                     <a href="https://github.com/bksharma1729/Finance-Tracker" target="_blank"
                                         rel="noopener noreferrer" class="project-link github-link">
                                         <i class="fab fa-github link-icon"></i>
-                                        <span>Code</span>
+                                        <span>Source</span>
                                     </a>
                                 </div>
                             </div>
@@ -434,14 +541,14 @@
                                     <i class="fas fa-award certifications-icon"></i>
                                     <h2>Certifications</h2>
                                 </div>
-                                <p class="certifications-subtitle">My professional achievements</p>
+                                <p class="certifications-subtitle">Certifications that reflect consistent learning and hands-on growth</p>
                             </div>
 
                             <div class="certifications-grid">
                                 <div class="certification-card animate-in" style="animation-delay: 0s;">
                                     <div class="certification-image-container">
                                         <img src="assets/Java.png" alt="Programming in Java"
-                                            class="certification-image">
+                                            class="certification-image" loading="lazy" decoding="async">
                                     </div>
                                     <div class="certification-content">
                                         <div class="certification-header">
@@ -469,7 +576,7 @@
                                 <div class="certification-card animate-in" style="animation-delay: 0.1s;">
                                     <div class="certification-image-container">
                                         <img src="assets/DSA.png" alt="Frontend Webdev with React"
-                                            class="certification-image">
+                                            class="certification-image" loading="lazy" decoding="async">
                                     </div>
                                     <div class="certification-content">
                                         <div class="certification-header">
@@ -501,7 +608,7 @@
                                 <div class="certification-card animate-in" style="animation-delay: 0.2s;">
                                     <div class="certification-image-container">
                                         <img src="assets/Neptel.png" alt="Social Networking"
-                                            class="certification-image">
+                                            class="certification-image" loading="lazy" decoding="async">
                                     </div>
                                     <div class="certification-content">
                                         <div class="certification-header">
@@ -532,7 +639,7 @@
                                 <div class="certification-card animate-in" style="animation-delay: 0.3s;">
                                     <div class="certification-image-container">
                                         <img src="assets/Web design.png" alt="Frontend Web Development"
-                                            class="certification-image">
+                                            class="certification-image" loading="lazy" decoding="async">
                                     </div>
                                     <div class="certification-content">
                                         <div class="certification-header">
@@ -561,7 +668,7 @@
                                 <div class="certification-card animate-in" style="animation-delay: 0.2s;">
                                     <div class="certification-image-container">
                                         <img src="assets/Python.png" alt="Social Networking"
-                                            class="certification-image">
+                                            class="certification-image" loading="lazy" decoding="async">
                                     </div>
                                     <div class="certification-content">
                                         <div class="certification-header">
@@ -602,7 +709,7 @@
                                     <i class="fas fa-graduation-cap education-icon"></i>
                                     <h2>Education</h2>
                                 </div>
-                                <p class="education-subtitle">My academic background</p>
+                                <p class="education-subtitle">The academic foundation shaping my technical journey</p>
                             </div>
 
                             <div class="education-timeline">
@@ -617,7 +724,7 @@
                                                 <h3 class="timeline-title">B.Tech in Computer Science</h3>
                                                 <span class="timeline-period">Aug 2023 - July 2027</span>
                                             </div>
-                                            <p class="timeline-subtitle">Lovely Professional University • CGPA: 7.11</p>
+                                            <p class="timeline-subtitle">Lovely Professional University • CGPA: 7.33</p>
                                         </div>
                                     </div>
                                 </div>
@@ -664,19 +771,48 @@
                             <div class="contact-header animate-in">
                                 <div class="contact-title">
                                     <i class="fas fa-envelope contact-icons"></i>
-                                    <h2>Get In Touch</h2>
+                                    <h2>Let’s Connect</h2>
                                 </div>
                                 <p class="contact-subtitle">
-                                    Have a question or want to work together? Send me a message!
+                                    Interested in working together, discussing a role, or exploring a project? Let’s connect.
                                 </p>
                             </div>
 
+                            <div class="contact-highlights animate-in">
+                                <a href="mailto:babluks2244@gmail.com" class="contact-highlight-card">
+                                    <i class="fas fa-at"></i>
+                                    <div>
+                                        <span class="contact-highlight-label">Email</span>
+                                        <strong>babluks2244@gmail.com</strong>
+                                        <small>Direct inbox for opportunities and collaboration</small>
+                                    </div>
+                                </a>
+                                <a href="https://www.linkedin.com/in/bablu-kumar-sharma/" target="_blank" rel="noopener noreferrer" class="contact-highlight-card">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <div>
+                                        <span class="contact-highlight-label">LinkedIn</span>
+                                        <strong>Connect professionally</strong>
+                                        <small>Best for networking, hiring conversations, and updates</small>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/bksharma1729" target="_blank" rel="noopener noreferrer" class="contact-highlight-card">
+                                    <i class="fab fa-github"></i>
+                                    <div>
+                                        <span class="contact-highlight-label">GitHub</span>
+                                        <strong>See code and project work</strong>
+                                        <small>Explore repositories, experiments, and implementation details</small>
+                                    </div>
+                                </a>
+                            </div>
+
                             <div class="contact-form-container animate-in">
-                                <form class="contact-form" id="contactForm">
+                                <form class="contact-form" id="contactForm" action="https://formsubmit.co/babluks2244@gmail.com" method="POST">
+                                    <input type="hidden" name="_subject" value="New portfolio inquiry">
+                                    <input type="text" name="_honey" class="contact-honeypot" tabindex="-1" autocomplete="off">
                                     <div class="form-group">
                                         <label for="name" class="form-label">
                                             <i class="fas fa-user"></i>
-                                            Name
+                                            Your Name
                                         </label>
                                         <input type="text" id="name" name="name" class="form-input"
                                             placeholder="Your name" required>
@@ -685,7 +821,7 @@
                                     <div class="form-group">
                                         <label for="email" class="form-label">
                                             <i class="fas fa-envelope"></i>
-                                            Email
+                                            Email Address
                                         </label>
                                         <input type="email" id="email" name="email" class="form-input"
                                             placeholder="your.email@example.com" required>
@@ -694,15 +830,15 @@
                                     <div class="form-group">
                                         <label for="message" class="form-label">
                                             <i class="fas fa-comment"></i>
-                                            Message
+                                            Project Note
                                         </label>
                                         <textarea id="message" name="message" class="form-textarea"
-                                            placeholder="Your message here..." required></textarea>
+                                            placeholder="Tell me a little about the role, project, or idea..." required></textarea>
                                     </div>
 
                                     <button type="submit" class="form-submit-btn">
                                         <i class="fas fa-paper-plane"></i>
-                                        Send Message
+                                        Start the Conversation
                                     </button>
                                 </form>
                             </div>
@@ -734,15 +870,7 @@
                 return;
             }
 
-            // Here you can add your form submission logic
-            // For example, send to a backend API or use a service like Formspree
-            console.log('Form submitted:', { name, email, message });
-
-            // Show success message
-            alert('Thank you for your message! I will get back to you soon.');
-
-            // Reset form
-            this.reset();
+            this.submit();
         });
 
         // Animation on scroll
@@ -755,6 +883,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
@@ -791,9 +920,35 @@
             });
         }
 
-        window.addEventListener('scroll', setActiveNav);
+        const navigation = document.querySelector('.navigation');
+
+        function updateNavState() {
+            if (!navigation) {
+                return;
+            }
+
+            navigation.classList.toggle('scrolled', window.scrollY > 24);
+        }
+
+        let scrollFrame = 0;
+
+        function handleScroll() {
+            if (scrollFrame) {
+                return;
+            }
+
+            scrollFrame = window.requestAnimationFrame(() => {
+                setActiveNav();
+                updateNavState();
+                scrollFrame = 0;
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
         window.addEventListener('load', setActiveNav);
+        window.addEventListener('load', updateNavState);
     </script>
+    <script src="js/theme-toggle.js"></script>
     <script src="js/background-3d.js"></script>
 </body>
 

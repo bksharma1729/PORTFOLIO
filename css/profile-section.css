@@ -2,13 +2,12 @@
 .profile-section {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  padding: 60px 9% 0;
+  align-items: flex-start;
+  padding: 118px 9% 1.25rem;
   background: #1B2823;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   color: #ecf4f3;
-  
 }
 .profile-container {
   max-width: 1400px;
@@ -23,7 +22,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 1.4rem;
 }
 
 /* Animation classes */
@@ -74,19 +73,20 @@
 }
 
 .profile-name {
-  font-size: 55px;
+  font-size: 3.4rem;
   font-weight: 700;
   color: #ecf4f3;
-  margin-bottom: 0;
-  line-height: 1.15;
+  margin-bottom: 0.15rem;
+  line-height: 1.02;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .profile-title {
-  font-size: 32px;
+  font-size: 2.1rem;
   font-weight: 500;
   color: #ffffff;
-  margin-top: -10px;
+  margin-top: 0;
   margin-bottom: 0;
   display: inline-block;
 }
@@ -95,7 +95,7 @@
 .profile-title-rotate {
   position: relative;
   display: inline-block;
-  min-width: 15ch;
+  min-width: 13ch;
   height: 1.4em;
   vertical-align: middle;
 }
@@ -147,11 +147,11 @@
 }
 
 .profile-description {
-  font-size: 16px;
+  font-size: 0.98rem;
   color: rgba(255, 255, 255, 0.92);
-  line-height: 1.65;
-  margin: 10px 0 25px;
-  max-width: 520px;
+  line-height: 1.58;
+  margin: 0.8rem 0 0.85rem;
+  max-width: 500px;
 }
 
 /* Button + social in one row (like image) */
@@ -160,6 +160,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 0.8rem;
 }
 
 .btn-download-cv {
@@ -186,7 +187,7 @@
   display: flex;
   align-items: center;
   gap: 0;
-  margin-left: 20px;
+  margin-left: 8px;
 }
 
 .social-link {
@@ -280,17 +281,13 @@
 }
 
 .profile-image-wrapper {
-  width: min(320px, 40vw);
-  height: min(320px, 40vw);
-
+  width: min(305px, 33vw);
+  height: min(305px, 33vw);
   position: relative;
-  margin-right: 240px;
-  /* width: 45vh; */
-  max-width: 320px;
-  /* height: 45vh; */
-  max-height: 320px;
+  margin-right: 0;
+  max-width: 305px;
+  max-height: 305px;
   border-radius: 50%;
-  
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -333,7 +330,7 @@
 
 .profile-image {
   position: absolute;
-  top: 30px;
+  top: 24px;
   display: block;
   width: 85%;
   object-fit: cover;
@@ -346,17 +343,19 @@
 
 @media (min-width: 1024px) {
   .profile-content {
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.78fr);
+    align-items: start;
+    gap: 2.2rem;
   }
 
   .profile-info {
     text-align: left;
+    max-width: 560px;
   }
 
   .profile-name {
-    font-size: 55px;
+    font-size: 3.4rem;
   }
 
   .profile-description {
@@ -370,13 +369,12 @@
 
 @media (max-width: 600px) {
   .profile-name {
-    font-size: 36px;
+    font-size: 2.6rem;
+    white-space: normal;
   }
 
   .profile-title {
-    font-size: 24px;
-    /* white-space: nowrap; */
-    
+    font-size: 1.9rem;
   }
 
   .profile-description {
@@ -395,9 +393,178 @@
 
 @media (max-width: 768px) {
   .profile-image-wrapper {
-    width: 280px;
-    height: 280px;
-    max-width: 280px;
-    max-height: 280px;
+    width: 255px;
+    height: 255px;
+    max-width: 255px;
+    max-height: 255px;
+  }
+
+  .profile-section {
+    padding: 108px 6% 1rem;
+  }
+}
+
+.profile-image-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.profile-signal-box {
+  max-width: 500px;
+  padding: 0.85rem 0.9rem 0.8rem;
+  border-radius: 1.35rem;
+  background:
+    linear-gradient(135deg, rgba(170, 255, 0, 0.08), rgba(255, 255, 255, 0.03)),
+    rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(173, 255, 47, 0.14);
+  box-shadow: 0 20px 42px -28px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(14px);
+}
+
+.profile-signal-head {
+  margin-bottom: 0.65rem;
+}
+
+.profile-signal-kicker {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(173, 255, 47, 0.12);
+  color: #adff2f;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.profile-signal-head h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.96rem;
+  font-weight: 600;
+}
+
+.profile-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 0.7rem;
+}
+
+.profile-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.74rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(173, 255, 47, 0.18);
+  color: #ecf4f3;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.profile-pill i {
+  color: #adff2f;
+}
+
+.profile-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.profile-stat-card {
+  padding: 0.7rem 0.65rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(173, 255, 47, 0.1);
+}
+
+.profile-stat-value {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #adff2f;
+  margin-bottom: 0.15rem;
+}
+
+.profile-stat-label {
+  display: block;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.76rem;
+  line-height: 1.28;
+}
+
+.profile-focus-card {
+  width: min(100%, 310px);
+  padding: 0.85rem 0.9rem 0.8rem;
+  border-radius: 1.35rem;
+  background:
+    radial-gradient(circle at top right, rgba(170, 255, 0, 0.12), transparent 32%),
+    rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(173, 255, 47, 0.14);
+  box-shadow: 0 22px 48px -30px rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(14px);
+}
+
+.profile-focus-label {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  color: #adff2f;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.profile-focus-card h3 {
+  margin: 0 0 0.65rem;
+  color: #ffffff;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.profile-focus-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.profile-focus-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.35;
+  font-size: 0.78rem;
+}
+
+.profile-focus-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.58rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: #adff2f;
+  box-shadow: 0 0 0 4px rgba(173, 255, 47, 0.12);
+}
+
+@media (max-width: 768px) {
+  .profile-signal-box {
+    padding: 1rem;
+  }
+
+  .profile-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-focus-card {
+    width: 100%;
   }
 }

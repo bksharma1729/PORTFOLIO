@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/objective-section.css">
+    <link rel="stylesheet" href="css/theme-toggle.css">
 </head>
 <body>
+    <button class="theme-toggle theme-toggle--floating" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to white theme">
+        <span class="theme-toggle__label theme-toggle__label--default">Default</span>
+        <span class="theme-toggle__track" aria-hidden="true">
+            <span class="theme-toggle__thumb"></span>
+        </span>
+        <span class="theme-toggle__label theme-toggle__label--light">White</span>
+    </button>
     <div class="portfolio-app">
         <main>
             <!-- Objective Section -->
@@ -17,18 +28,21 @@
                     <div class="objective-header animate-in">
                         <div class="objective-title">
                             <i class="fas fa-bullseye objective-icon"></i>
-                            <h2>Career Objective</h2>
+                            <h2>Professional Direction</h2>
                         </div>
                     </div>
 
                     <div class="objective-content animate-in">
                         <p class="objective-text">
-                            Passionate Full Stack Developer with 3+ years of experience in building scalable web applications using modern technologies. Seeking opportunities to contribute to innovative projects while continuously learning and growing in a collaborative environment. Dedicated to writing clean, efficient code and delivering exceptional user experiences.
+                            Aspiring Data Analyst and MERN developer with a growing body of work across analytics,
+                            dashboards, and user-focused web applications. I am focused on building solutions that are
+                            thoughtful in execution, clear in communication, and useful in real-world decision-making.
                         </p>
                     </div>
                 </div>
             </section>
         </main>
     </div>
+    <script src="js/theme-toggle.js"></script>
 </body>
 </html>

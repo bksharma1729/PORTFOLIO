@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/theme-toggle.css">
 </head>
 <body>
+    <button class="theme-toggle theme-toggle--floating" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to white theme">
+        <span class="theme-toggle__label theme-toggle__label--default">Default</span>
+        <span class="theme-toggle__track" aria-hidden="true">
+            <span class="theme-toggle__thumb"></span>
+        </span>
+        <span class="theme-toggle__label theme-toggle__label--light">White</span>
+    </button>
     <div class="portfolio-app">
         <main>
             <section id="skills" class="skills-section">
                 <div class="skills-header animate-in">
-                    <h2 class="skills-title">My Skills</h2>
+                    <h2 class="skills-title">Core Capabilities</h2>
                     <p class="skills-subtitle">
-                        Technologies and tools I work with to create amazing digital experiences
+                        The tools, platforms, and technologies I use to turn ideas into practical outcomes
                     </p>
                 </div>
 
@@ -25,7 +36,7 @@
                             <i class="fa-brands fa-java skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Java</h4>
-                        <p class="skill-description"></p>
+                        <p class="skill-description">Core programming and problem solving</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -34,7 +45,7 @@
                             <i class="fab fa-react skill-icon"></i>
                         </div>
                         <h4 class="skill-name">React</h4>
-                        <p class="skill-description">Modern UI library</p>
+                        <p class="skill-description">Component-driven frontend development</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -43,7 +54,7 @@
                             <i class="fab fa-js-square skill-icon"></i>
                         </div>
                         <h4 class="skill-name">JavaScript</h4>
-                        <p class="skill-description">ES6+ & DOM manipulation</p>
+                        <p class="skill-description">Interactive web interfaces and logic</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -52,7 +63,7 @@
                             <i class="fab fa-html5 skill-icon"></i>
                         </div>
                         <h4 class="skill-name">HTML5</h4>
-                        <p class="skill-description">Semantic markup</p>
+                        <p class="skill-description">Structured, accessible page architecture</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -61,7 +72,7 @@
                             <i class="fab fa-css3-alt skill-icon"></i>
                         </div>
                         <h4 class="skill-name">CSS3</h4>
-                        <p class="skill-description">Responsive design</p>
+                        <p class="skill-description">Responsive layouts and polished UI styling</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -70,7 +81,7 @@
                             <i class="fab fa-node-js skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Node.js</h4>
-                        <p class="skill-description">Server-side JavaScript</p>
+                        <p class="skill-description">Backend logic and application services</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -79,7 +90,7 @@
                             <i class="fas fa-server skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Express</h4>
-                        <p class="skill-description">Web framework</p>
+                        <p class="skill-description">API development and route handling</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -88,7 +99,7 @@
                             <i class="fas fa-database skill-icon"></i>
                         </div>
                         <h4 class="skill-name">MongoDB</h4>
-                        <p class="skill-description">NoSQL database</p>
+                        <p class="skill-description">Flexible data storage for modern apps</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -97,7 +108,7 @@
                             <i class="fab fa-kotlin skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Kotlin</h4>
-                        <p class="skill-description">Programming language</p>
+                        <p class="skill-description">Strong typed language for modern development</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -106,7 +117,7 @@
                             <i class="fas fa-code skill-icon"></i>
                         </div>
                         <h4 class="skill-name">XML</h4>
-                        <p class="skill-description">Markup language</p>
+                        <p class="skill-description">Structured layouts and configuration markup</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -115,7 +126,7 @@
                             <i class="fab fa-git-alt skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Git</h4>
-                        <p class="skill-description">Version control</p>
+                        <p class="skill-description">Version control and collaboration workflow</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -124,7 +135,7 @@
                             <i class="fab fa-github skill-icon"></i>
                         </div>
                         <h4 class="skill-name">GitHub</h4>
-                        <p class="skill-description">Code collaboration</p>
+                        <p class="skill-description">Code hosting, collaboration, and visibility</p>
                         <div class="skill-glow"></div>
                     </div>
 
@@ -133,21 +144,22 @@
                             <i class="fas fa-code skill-icon"></i>
                         </div>
                         <h4 class="skill-name">VS Code</h4>
-                        <p class="skill-description">Code editor</p>
+                        <p class="skill-description">Primary environment for development work</p>
                         <div class="skill-glow"></div>
                     </div>
 
                     <div class="skill-card animate-in" style="animation-delay: 1.3s;">
                         <div class="skill-icon-wrapper">
-                            <i class="fas fa-cursor skill-icon"></i>
+                            <i class="fas fa-mouse-pointer skill-icon"></i>
                         </div>
                         <h4 class="skill-name">Cursor</h4>
-                        <p class="skill-description">Code editor</p>
+                        <p class="skill-description">AI-assisted workflow for faster iteration</p>
                         <div class="skill-glow"></div>
                     </div>
                 </div>
             </section>
         </main>
     </div>
+    <script src="js/theme-toggle.js"></script>
 </body>
 </html>

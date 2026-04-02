@@ -10,6 +10,10 @@
   }
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const lowPowerDevice =
+    prefersReducedMotion.matches ||
+    ((navigator.hardwareConcurrency || 8) <= 4) ||
+    ((navigator.deviceMemory || 8) <= 4);
   const pointer = { x: 0, y: 0 };
   const accentColor = '#aaff00';
 
@@ -18,9 +22,15 @@
   let depth = 900;
   let particles = [];
   let animationFrame = 0;
+  let isRunning = false;
+  let resizeFrame = 0;
+  let pointerFrame = 0;
+  let nextPointer = null;
 
   function createParticles() {
-    const count = width < 768 ? 34 : 60;
+    const count = lowPowerDevice
+      ? (width < 768 ? 16 : 28)
+      : (width < 768 ? 24 : 42);
     particles = Array.from({ length: count }, () => ({
       x: (Math.random() - 0.5) * width * 0.95,
       y: (Math.random() - 0.5) * height * 0.95,
@@ -44,8 +54,17 @@
   }
 
   function startRenderLoop() {
-    window.cancelAnimationFrame(animationFrame);
+    if (isRunning || document.hidden) {
+      return;
+    }
+
+    isRunning = true;
     render();
+  }
+
+  function stopRenderLoop() {
+    isRunning = false;
+    window.cancelAnimationFrame(animationFrame);
   }
 
   function project(point) {
@@ -66,11 +85,12 @@
         const dx = a.x - b.x;
         const dy = a.y - b.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance > 140) {
+        const maxDistance = lowPowerDevice ? 100 : 125;
+        if (distance > maxDistance) {
           continue;
         }
 
-        context.strokeStyle = `rgba(170, 255, 0, ${0.08 * (1 - distance / 140)})`;
+        context.strokeStyle = `rgba(170, 255, 0, ${0.08 * (1 - distance / maxDistance)})`;
         context.lineWidth = 1;
         context.beginPath();
         context.moveTo(a.x, a.y);
@@ -107,6 +127,10 @@
   }
 
   function render() {
+    if (!isRunning) {
+      return;
+    }
+
     context.clearRect(0, 0, width, height);
 
     const projected = [];
@@ -135,8 +159,18 @@
   }
 
   function updatePointer(event) {
-    pointer.x = (event.clientX / width - 0.5) * 2;
-    pointer.y = (event.clientY / height - 0.5) * 2;
+    nextPointer = event;
+    if (pointerFrame) {
+      return;
+    }
+
+    pointerFrame = window.requestAnimationFrame(function () {
+      if (nextPointer) {
+        pointer.x = (nextPointer.clientX / width - 0.5) * 2;
+        pointer.y = (nextPointer.clientY / height - 0.5) * 2;
+      }
+      pointerFrame = 0;
+    });
   }
 
   function resetPointer() {
@@ -144,15 +178,37 @@
     pointer.y = 0;
   }
 
+  function queueResize() {
+    if (resizeFrame) {
+      return;
+    }
+
+    resizeFrame = window.requestAnimationFrame(function () {
+      resize();
+      resizeFrame = 0;
+    });
+  }
+
+  function handleVisibilityChange() {
+    if (document.hidden) {
+      stopRenderLoop();
+    } else {
+      startRenderLoop();
+    }
+  }
+
   resize();
   startRenderLoop();
 
-  window.addEventListener('resize', resize);
+  window.addEventListener('resize', queueResize, { passive: true });
   window.addEventListener('mousemove', updatePointer, { passive: true });
   window.addEventListener('mouseleave', resetPointer);
+  document.addEventListener('visibilitychange', handleVisibilityChange);
 
   if (typeof prefersReducedMotion.addEventListener === 'function') {
     prefersReducedMotion.addEventListener('change', function () {
+      stopRenderLoop();
+      queueResize();
       startRenderLoop();
     });
   }

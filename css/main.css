@@ -1,23 +1,22 @@
-CSS Variables for Theme Support
+/* CSS variables for theme support */
 :root {
-  
-  /* --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-tertiary: #f1f5f9; */
-  --text-primary: #1B2823;
-  /* --text-secondary: #64748b;
-  --text-muted: #94a3b8;
-  --accent-primary: #3b82f6;
-  --accent-secondary: #8b5cf6;
-  --accent-tertiary: #06b6d4;
-  --border-color: #e2e8f0;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); */
+  --bg-primary: #f6f8f5;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #eaf0e6;
+  --text-primary: #1b2823;
+  --text-secondary: #42534c;
+  --text-muted: #6f8077;
+  --accent-primary: #658f00;
+  --accent-secondary: #7ea90f;
+  --accent-tertiary: #96c126;
+  --border-color: #d7e1d3;
+  --shadow-sm: 0 1px 2px 0 rgb(17 24 39 / 0.06);
+  --shadow-md: 0 12px 32px -18px rgb(17 24 39 / 0.22);
+  --shadow-lg: 0 18px 40px -20px rgb(17 24 39 / 0.24);
+  --shadow-xl: 0 24px 56px -24px rgb(17 24 39 / 0.28);
+  --gradient-primary: linear-gradient(135deg, #8cb800 0%, #5d8400 100%);
+  --gradient-secondary: linear-gradient(135deg, #a1c936 0%, #6f9b00 100%);
+  --gradient-tertiary: linear-gradient(135deg, #7ca900 0%, #a1c936 100%);
 }
 
 [data-theme="dark"] {
@@ -38,6 +37,14 @@ CSS Variables for Theme Support
   --gradient-primary: linear-gradient(135deg, #aaff00 0%, #88cc00 100%);
   --gradient-secondary: linear-gradient(135deg, #aaff00 0%, #b8ff33 100%);
   --gradient-tertiary: linear-gradient(135deg, #88cc00 0%, #aaff00 100%);
+}
+
+html {
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 * {
